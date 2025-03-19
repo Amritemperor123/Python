@@ -1,3 +1,5 @@
+# binary classification means there are two classes of data, and the smaple data will belong to either one of them.
+
 import pandas as pd
 import numpy as np
 from sklearn.datasets import load_breast_cancer
