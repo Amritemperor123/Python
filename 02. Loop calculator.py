@@ -1,3 +1,6 @@
+# this is a simple demostration of how a calculator might work. 
+# treat the numerical inputs for specific operations like the buttons you press with symbols in it. 
+
 import math as m
 
 def calculator(a,x):
