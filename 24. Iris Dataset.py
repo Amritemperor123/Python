@@ -1,8 +1,12 @@
+# you'll need the Iris dataset for this code. 
+# download the dataset from kaggle or github.
+# this program demostrates data preprocessing and summerization for machine learning tasks.
+
 import pandas as pd
 # first columns index is 0
-a=pd.read_csv("C:/Users/ASUS/OneDrive/Desktop/Dataset/Iris.CSV",index_col=0)
+a=pd.read_csv("<link or file path to the dataset>",index_col=0)
 # missing value will be assigned to na_values for filtering
-a=pd.read_csv("C:/Users/ASUS/OneDrive/Desktop/Dataset/Iris.CSV",na_values=0)
+a=pd.read_csv("<link or file path to the dataset>",na_values=0)
 print(a.index) #no. of indexes
 print(a.columns) #no. of columns
 print(a.size) #size of the dataset
