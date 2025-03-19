@@ -1,23 +1,42 @@
+# upto this point, we were using a single neuron which could compute the AND and OR operations swiftly
+# then why should we build a multilayered neural network?
+# beacuse these problems we just solved are linearly seperable 
+# which means you can draw a line in the graph and the inputs and outputs will take two seperatte sides
+# but there are problems which are not as simple as these 
+# i.e. you cannot seperate the inputs from outputs by drawing a straight line
+# XOR operation is a good example of these kind of problems
+# to solve these problems, we need a multilayered nrural network
+
 import numpy as np
 
+# sigmoid function is a type of step function which decides when a neuron/perceptron should fire
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 def sigmoid_derivative(x):
     return x * (1 - x)
 
+# these are the input and output sets
 X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 y = np.array([[0], [1], [1], [0]])
 
 np.random.seed(0)
+
+# these are the number of perceptrons in the input layer, hidden layer and the output layer
 input_size, hidden_size, output_size = 2, 2, 1
 
+# weights and bias for the hidden layer
 W1 = np.random.uniform(-1, 1, (input_size, hidden_size))
 b1 = np.zeros((1, hidden_size))
+
+# weights and bias for the output layer
 W2 = np.random.uniform(-1, 1, (hidden_size, output_size))
 b2 = np.zeros((1, output_size))
 
+# learning rate defines the rate of change of weights and bias 
 learning_rate = 0.5
+
+# epochs define the number of times a model train using the same dataset
 epochs = 10000
 
 def train():
