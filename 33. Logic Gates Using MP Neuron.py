@@ -1,3 +1,9 @@
+# MP neurones or McCullouch Pits neurons are the building blocks to build a neural network. 
+# a single MP neuron has two functions, the first one being aggregation and the second one being the threshold
+# the aggregation is done by adding up all the inputs.
+# the threshold is set based on various criteria, which decides when a neuron should fire (output = 1) or when it should not (output = 0)
+# MP neurons can only process binary data
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -9,23 +15,15 @@ def get_valid_input(prompt):
         else:
             print("Invalid input. Please enter 0 or 1.")
 
+# the OR operation returns 1 if any one of the inputs is 1
+# the minimum aggregated sum for a OR neuron to fire would be 1
 def OR(x1, x2):    
-    theta = 1
-    g = x1 + x2
-    if g >= theta: 
-        f = 1
-    if g < theta:
-        f = 0
-    return f
+    return 1 if (x1 + x2) >= 1 else 0
 
+# the AND operation returns 1 only if both the inputs are 1
+# the minimum aggregated sum for a AND neuron to fire would be 2
 def AND(x1, x2):    
-    theta = 2
-    g = x1 + x2
-    if g >= theta: 
-        f = 1
-    if g < theta:
-        f = 0
-    return f
+    return 1 if (x1 + x2) >= 2 else 0
 
 x1 = get_valid_input("Enter first input (0 or 1): ")
 x2 = get_valid_input("Enter second input (0 or 1): ")
