@@ -1,3 +1,6 @@
+# what is a plindrome you might ask?
+# it's a number which reads same both ways, like 12311 or 565
+
 x=int(input('Enter any number:'))
 a=x
 b=0
