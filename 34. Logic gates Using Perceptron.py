@@ -1,3 +1,10 @@
+# perceptron is an upgraded version of MP neurons
+# it encorporates the use of weights and bias to guide the output to a certain direction
+# perceptron is capable of handling different datatypes
+
+# in case of the aggregated sum, perceptron performs weighted sum
+# by multiplying each inputs with their corresponding weights and addiing them altoghether with bias, we get weighted sum
+# the threshold function will be replaced with a step function in later programs, which has many variants
 def perceptron(inputs, weights, threshold):
     weighted_sum = sum(i * w for i, w in zip(inputs, weights))    
     return 1 if weighted_sum >= threshold else 0
