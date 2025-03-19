@@ -1,3 +1,10 @@
+# this is the most basic demonstration of how you can perform scientific calculations.
+# you can improve this code by creating a recursive function 
+# which uses the previous output to perform further operations.
+
+# what is a recursive fucntion you might ask?
+# it's a fucntion that calls itself when a certain condition occurs.
+
 import math as m
 
 def calculator(a,x):
